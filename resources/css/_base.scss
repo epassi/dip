@@ -36,7 +36,11 @@ th {
 }
 
 section {
-	margin: 4.0rem 2.0rem 0 2.0rem;
+	margin: 4.0rem $margin-side 0 $margin-side;
 	padding-top: 2.0rem;
 	border-top: 1px solid $color-light;
+}
+
+b {
+	font-weight: 700;
 }

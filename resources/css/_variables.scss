@@ -9,11 +9,11 @@ $font-medium:		1.6rem;
 $font-large: 		2.0rem;
 
 // Colors
-$color-xlight:		#ccc;
-$color-light:		#ccc;
-$color-medium:		#ccc;
-$color-dark:		#ccc;
-$color-xdark:		#ccc;
+$color-xlight:		#eee;
+$color-light:		#ddd;
+$color-medium:		#595959;	// Lightest ADA compliant gray.
+$color-dark:		#666;
+$color-xdark:		#222;
 $color-invert:		#fff;
 $color-link:		#4178d7;
 
@@ -23,3 +23,4 @@ $speed-moderate:	1000ms;
 $speed-slow:		2000ms;
 
 // Other
+$margin-side: 		2.8rem;

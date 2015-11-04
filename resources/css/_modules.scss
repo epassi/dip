@@ -2,7 +2,7 @@
 
 
 .page-title {
-	padding: 0 2.0rem;
+	margin: 0 $margin-side;
 	font-size: 3.6rem;
 	line-height: 125%;
 }
@@ -48,8 +48,9 @@
 .description {
 	display: none;
 	font-size: 1.5rem;
-	line-height: 125%;
+	line-height: 135%;
 	margin-top: 1.5rem;
+	color: $color-medium;
 }
 
 .description.is-active {
