@@ -5,33 +5,37 @@
 html {
 	font-size: 62.5%;
 }
-@media (min-width: 600px) {
-	html {
-		font-size: 85%;
-	}
-}
-@media (min-width: 900px) {
-	html {
-		font-size: 100%;
-	}
-}
-@media (min-width: 1400px) {
-	html {
-		font-size: 110%;
-	}
-}
+// @media (min-width: 600px) {
+// 	html {
+// 		font-size: 85%;
+// 	}
+// }
+// @media (min-width: 900px) {
+// 	html {
+// 		font-size: 100%;
+// 	}
+// }
+// @media (min-width: 1400px) {
+// 	html {
+// 		font-size: 110%;
+// 	}
+// }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 1.6rem;
 
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
+	width: 100%;
+	margin: 4.0rem auto;
 }
 
 th {
 	font-weight: bold;
 	text-align: left;
+}
+
+section {
+	padding: 0 2.0rem;
+	margin-top: 4.0rem;
 }

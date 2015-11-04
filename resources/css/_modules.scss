@@ -1,12 +1,52 @@
 ///////////////////////////////////////////////////////////////////////////////
 
-.measure {
-	font-size: 5.6rem;
-	margin-bottom: 0.8rem;
+
+.page-title {
+	padding: 0 2.0rem;
 }
 
-.label {
+///////////////////////////////////////////////////////////////////////////////
+
+
+.measure {
+	font-size: 3.2rem;
+	line-height: 125%;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.title {
+	font-size: 1.8rem;
+	// font-weight: 400;
+	line-height: 125%;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.more {
+	display: block;
 	font-size: 1.3rem;
-	margin-bottom: 4.8rem;
-	text-transform: uppercase;
+	color: $color-link;
+	margin-top: 1.3rem;
+	cursor: pointer;
+}
+
+.more.is-active {
+	display: none;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.description {
+	display: none;
+	font-size: 1.5rem;
+	line-height: 125%;
+	margin-top: 1.5rem;
+}
+
+.description.is-active {
+	display: block;
 }
