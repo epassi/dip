@@ -3,13 +3,16 @@
 
 .page-title {
 	padding: 0 2.0rem;
+	font-size: 3.6rem;
+	line-height: 125%;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
 
 .measure {
-	font-size: 3.2rem;
+	font-size: 1.9rem;
+	font-weight: 700;
 	line-height: 125%;
 }
 
@@ -20,6 +23,7 @@
 	font-size: 1.8rem;
 	// font-weight: 400;
 	line-height: 125%;
+	margin-top: 0.4rem;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -29,8 +33,9 @@
 	display: block;
 	font-size: 1.3rem;
 	color: $color-link;
-	margin-top: 1.3rem;
+	margin-top: 1.0rem;
 	cursor: pointer;
+	font-weight: 400;
 }
 
 .more.is-active {
