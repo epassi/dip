@@ -10,16 +10,27 @@
 </head>
 
 <body>
-	<div class="measure-container">
-		<p class="measure" id="screen-resolution"></p>
-		<p class="label">Display DIP</p>
+	<h1 class="page-title">Designing for this <span class="platform"></span></h1>
+	<section id="ideal-grid">
+		<h1 class="measure"><span class="dip-res"></span></h1>
+		<h2 class="title">Ideal screen comp size<br>for development</h2>
+		<p class="more">More</p>
+		<p class="description">This size makes it easier for developers to use your Photoshop, Sketch, or Illustrator source file as a measurement spec, because it matches the density independent (DIP) grid: an abstract pixel grid shared by all apps and browsers to approximate consistent sizing across displays of varying pixel densities.</p>
+	</section>
+	<section id="bitmap-scale">
+		<h1 class="measure"><span class="density"></span>&times;</h1>
+		<h2 class="title">Bitmap asset scale for<br><span class="dip-res"></span> comp</h2>
+		<p class="more">More</p>
+		<p class="description">Bitmap assets, including photos and other non-vector elements, should be cut for developers at <b><span class="density"></span> times</b> the size they appear in your <span class="dip-res"></span> comp. For example, a 100 &times; 100 image in your comp would need to be cut as a <span class="asset-res"></span> &times; <span class="asset-res"></span> asset. If you use Photoshop for your screen comp, it might be helpful to link your high resolution bitmap assets as smart objects.</p>
+	</section>
+	<section id="practical-grid">
+		<h1 class="measure"><span class="display-res"></span></h1>
+		<h2 class="title">Practical screen comp size for<br>Photoshop Retina and prototyping</h2>
+		<p class="more">More</p>
+		<p class="description">If you use Photoshop with a Retina display and you find <span class="dip-res"></span> too small as a design space, use <span class="display-res"></span> instead. This is also a practical comp size if you plan to do a lot of screen-based prototyping with tools like InVision. As a best practice, append <b>@<span class="density"></span>x</b> to the PSD filename so that both designers and developers know they should divide by <span class="density"></span> to get proper DIP measurements.
+</p>
+	</section>
 
-		<p class="measure" id="viewport-resolution"></p>
-		<p class="label">Browser Viewport DIP</p>
-
-		<p class="measure" id="density"></p>
-		<p class="label">Display Density</p>
-	</div>
 	<script src="resources/js/all.min.js"></script>
 </body>
 

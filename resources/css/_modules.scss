@@ -1,12 +1,58 @@
 ///////////////////////////////////////////////////////////////////////////////
 
-.measure {
-	font-size: 5.6rem;
-	margin-bottom: 0.8rem;
+
+.page-title {
+	margin: 0 $margin-side;
+	font-size: 3.6rem;
+	line-height: 125%;
 }
 
-.label {
+///////////////////////////////////////////////////////////////////////////////
+
+
+.measure {
+	font-size: 1.9rem;
+	font-weight: 700;
+	line-height: 125%;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.title {
+	font-size: 1.8rem;
+	// font-weight: 400;
+	line-height: 125%;
+	margin-top: 0.4rem;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.more {
+	display: block;
 	font-size: 1.3rem;
-	margin-bottom: 4.8rem;
-	text-transform: uppercase;
+	color: $color-link;
+	margin-top: 1.0rem;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.more.is-active {
+	display: none;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+.description {
+	display: none;
+	font-size: 1.5rem;
+	line-height: 135%;
+	margin-top: 1.5rem;
+	color: $color-medium;
+}
+
+.description.is-active {
+	display: block;
 }
