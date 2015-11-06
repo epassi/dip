@@ -10,25 +10,56 @@
 </head>
 
 <body>
-	<h1 class="page-title">Designing for this <span class="platform"></span></h1>
-	<section id="ideal-grid">
-		<h1 class="measure"><span class="dip-res"></span></h1>
-		<h2 class="title">Ideal screen comp size<br>for development</h2>
-		<p class="more">More</p>
-		<p class="description">This size makes it easier for developers to use your Photoshop, Sketch, or Illustrator source file as a measurement spec, because it matches the density independent (DIP) grid: an abstract pixel grid shared by all apps and browsers to approximate consistent sizing across displays of varying pixel densities.</p>
+	<h1 class="page-title">Density independent setup for this <span class="platform"></span></h1>
+
+	<section class="setup" id="setup-ideal">
+		<h1 class="setup-title">For easier development</h1>
+		<div class="spec-table">
+			<div class="spec">
+				<p class="measure"><span class="dip-width"></span></p>
+				<p class="label">Width</p>
+			</div>
+			<div class="spec">
+				<p class="measure"><span class="dip-height"></span></p>
+				<p class="label">Height</p>
+			</div>
+			<div class="spec">
+				<p class="measure"><span class="bitmap-export-scale"></span>&times;</p>
+				<p class="label">Bitmap Export</p>
+			</div>
+			<div>
+				<p class="more">More</p>
+			</div>
+		</div>
+		<div class="description">
+			<p><span class="dip-width"></span> &times; <span class="dip-height"></span> makes it easier for developers to use your Photoshop, Sketch, or Illustrator source file as a measurement spec because it matches the density independent pixel grid: a universal pixel grid shared by all devices to approximate consistent sizing regardless of pixel density.</p>
+			<p>Bitmap assets, including photos and other non-vector elements, should be exported for development at <span class="bitmap-export-scale"></span> times the size they appear in your comp. For example, a 100 &times; 100 image in your comp would need to be cut as a <span class="asset-res"></span> &times; <span class="asset-res"></span> asset. If you use Sketch, this is easily managed by setting any object’s export size to <b><span class="bitmap-export-scale"></span>x</b>. If you use Photoshop for your screen comp, it might be helpful to link your high resolution bitmap assets as smart objects.</p>
+		</div>
 	</section>
-	<section id="bitmap-scale">
-		<h1 class="measure"><span class="density"></span>&times;</h1>
-		<h2 class="title">Bitmap asset scale for<br><span class="dip-res"></span> comp</h2>
-		<p class="more">More</p>
-		<p class="description">Bitmap assets, including photos and other non-vector elements, should be cut for developers at <b><span class="density"></span> times</b> the size they appear in your <span class="dip-res"></span> comp. For example, a 100 &times; 100 image in your comp would need to be cut as a <span class="asset-res"></span> &times; <span class="asset-res"></span> asset. If you use Photoshop for your screen comp, it might be helpful to link your high resolution bitmap assets as smart objects.</p>
-	</section>
-	<section id="practical-grid">
-		<h1 class="measure"><span class="display-res"></span></h1>
-		<h2 class="title">Practical screen comp size for<br>Photoshop Retina and prototyping</h2>
-		<p class="more">More</p>
-		<p class="description">If you use Photoshop with a Retina display and you find <span class="dip-res"></span> too small as a design space, use <span class="display-res"></span> instead. This is also a practical comp size if you plan to do a lot of screen-based prototyping with tools like InVision. As a best practice, append <b>@<span class="density"></span>x</b> to the PSD filename so that both designers and developers know they should divide by <span class="density"></span> to get proper DIP measurements.
-</p>
+
+	<section class="setup" id="setup-practical">
+		<h1 class="setup-title">For Photoshop Retina and prototyping</h1>
+		<div class="spec-table">
+			<div class="spec">
+				<p class="measure"><span class="real-width"></span></p>
+				<p class="label">Width</p>
+			</div>
+			<div class="spec">
+				<p class="measure"><span class="real-height"></span></p>
+				<p class="label">Height</p>
+			</div>
+			<div class="spec">
+				<p class="measure">1&times;</p>
+				<p class="label">Bitmap Export</p>
+			</div>
+			<div>
+				<p class="more">More</p>
+			</div>
+		</div>
+		<div class="description">
+			<p>If you use Photoshop with a Retina display and <span class="dip-width"></span> &times; <span class="dip-height"></span> is too small a design space, you can enlarge the canvas to <span class="real-width"></span> &times; <span class="real-height"></span> instead. This is also a practical comp size if you plan to make a lot of prototypes out of flattened screens.</p>
+			<p>Keep in mind that this size reflects physical device pixels, and not the density independent pixels used in code by developers. As a best practice, append <b>@<span class="bitmap-export-scale"></span>x</b> to the PSD filename so that both designers and developers know they should divide by <span class="bitmap-export-scale"></span> to get correct measurements.</p>			
+		</div>
 	</section>
 
 	<script src="resources/js/all.min.js"></script>

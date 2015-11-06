@@ -1,13 +1,4 @@
-Prototype
+DIP Info
 ====
 
-SCSS-based boilerplate for personal prototyping projects. Includes:
-* A default set of SCSS files for SMACSS setup.
-* Gruntfile for compiling SCSS files and maintaining a separate distribution folder.
-* Bower.js for jQuery.
-
-Directions:
-
-1. Run `npm install`.
-2. Run `bower install`.
-3. Run `grunt`. Build preview will open in browser.
+App and web designers often get confused about the concept of designing for density independence, so I made this diagnostic/helper page that will tell you exactly how to set up your design tool to target any device. Just load the page in your target device's browser.

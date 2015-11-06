@@ -2,51 +2,48 @@ var DIP = function() {
 	var ASSET_SIZE_DIP = 100;
 
 	function init() {
-		// $(document).ready(function() {
-		// 	onResize();
-		// });
-		// $(window).resize(onResize);
-
-		// onResize();
-
-		$(".dip-res").html(getIdealGrid());
-		$(".display-res").html(getPracticalGrid());
-		$(".density").html(getDensity());
+		$(".dip-width").html(getDIPWidth());
+		$(".dip-height").html(getDIPHeight());
+		$(".real-width").html(getRealWidth());
+		$(".real-height").html(getRealHeight());
+		$(".bitmap-export-scale").html(getBitmapExportScale);
 
 		$(".platform").html(getPlatform());
 		$(".asset-res").html(getSampleAssetSize());
 
 
 
-		$("#ideal-grid .more").click(onMoreIdealGrid);
-		$("#practical-grid .more").click(onMorePracticalGrid);
-		$("#bitmap-scale .more").click(onMoreBitmapScale);
+		$("#setup-ideal .more").click(onMoreIdeal);
+		$("#setup-practical .more").click(onMorePractical);
 	}
 
-	function onMoreIdealGrid(event) {
-		$("#ideal-grid .more").toggleClass("is-active");
-		$("#ideal-grid .description").toggleClass("is-active");
+	function onMoreIdeal(event) {
+		$("#setup-ideal .more").toggleClass("is-active");
+		$("#setup-ideal .description").toggleClass("is-active");
 	}
 
-	function onMorePracticalGrid(event) {
-		$("#practical-grid .more").toggleClass("is-active");
-		$("#practical-grid .description").toggleClass("is-active");
+	function onMorePractical(event) {
+		$("#setup-practical .more").toggleClass("is-active");
+		$("#setup-practical .description").toggleClass("is-active");
 	}
 
-	function onMoreBitmapScale(event) {
-		$("#bitmap-scale .more").toggleClass("is-active");
-		$("#bitmap-scale .description").toggleClass("is-active");
+	function getDIPWidth() {
+		return screen.width;
 	}
 
-	function getIdealGrid() {
-		return screen.width + " &times; " + screen.height;
+	function getDIPHeight() {
+		return screen.height;
 	}
 
-	function getPracticalGrid() {
-		return screen.width*getDensity() + " &times; " + screen.height*getDensity();
+	function getRealWidth() {
+		return screen.width*window.devicePixelRatio;
 	}
 
-	function getDensity() {
+	function getRealHeight() {
+		return screen.height*window.devicePixelRatio;
+	}
+
+	function getBitmapExportScale() {
 		return window.devicePixelRatio;
 	}
 
@@ -64,26 +61,16 @@ var DIP = function() {
 	}
 
 	function getSampleAssetSize() {
-		return ASSET_SIZE_DIP * getDensity();
+		return ASSET_SIZE_DIP * window.devicePixelRatio;
 	}
-
-	// function onResize(event) {
-	// 	// Update viewport measure.
-	// 	$("#viewport-resolution").html(getViewportRes());
-
-	// 	// Center.
-	// 	var halfwayDown = $(window).height() / 2;
-	// 	var halfContentHeight = $(".measure-container").height() / 2;
-	// 	var opticalAlignmentFudge = 0;
-	// 	var marginTop = halfwayDown - halfContentHeight - opticalAlignmentFudge;
-	// 	$(".measure-container").css("margin-top", marginTop);
-	// }
 
 	return {
 		init:init,
-		idealGrid:getIdealGrid,
-		practicalGrid:getPracticalGrid,
-		density:getDensity,
+		dipWidth:getDIPWidth,
+		dipHeight:getDIPHeight,
+		realWidth:getRealWidth,
+		realHeight:getRealHeight,
+		bitmapExportScale:getBitmapExportScale,
 		platform:getPlatform,
 		sampleAssetSize:getSampleAssetSize
 	};
