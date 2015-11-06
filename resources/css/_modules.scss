@@ -22,7 +22,8 @@
 @media (min-width: $vp-large-min) {
 	.setup {
 		float: left;
-		width: 45%;
+		overflow: hidden;
+		width: 40%;
 	}
 	.setup:last-of-type {
 		padding-bottom: 0;
