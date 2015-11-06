@@ -3,27 +3,57 @@
 
 .page-title {
 	margin: 0 $margin-side;
-	font-size: 3.6rem;
+	font-size: $font-size-large;
 	line-height: 125%;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
+.setup {
+	margin: 3.2rem $margin-side 0 $margin-side;
+	border-top: 1px solid $color-light;
+}
 
-.measure {
-	font-size: 1.9rem;
-	font-weight: 700;
-	line-height: 125%;
+.setup:last-of-type {
+	padding-bottom: 3.2rem;
+	border-bottom: 1px solid $color-light;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
+.setup-title {
+	font-size: $font-size-medium;
+	font-weight: 400;
+	line-height: 135%;
+	margin-top: 0.8rem;
+}
 
-.title {
-	font-size: 1.8rem;
-	// font-weight: 400;
-	line-height: 125%;
-	margin-top: 0.4rem;
+///////////////////////////////////////////////////////////////////////////////
+
+.spec-table {
+	display: table;
+	width: 100%;
+	margin-top: $font-size-medium;
+
+	div {
+		display: table-cell;
+		width: 25%;
+		vertical-align: bottom;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+.spec {
+	.measure {
+		font-size: $font-size-medium;
+		font-weight: 500;
+	}
+	.label {
+		font-size: $font-size-small;
+		margin-top: 0.4rem;
+		font-weight: 400;
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -31,11 +61,11 @@
 
 .more {
 	display: block;
-	font-size: 1.3rem;
 	color: $color-link;
-	margin-top: 1.0rem;
 	cursor: pointer;
+	font-size: $font-size-small;
 	font-weight: 400;
+	text-align: right;
 }
 
 .more.is-active {
@@ -47,10 +77,13 @@
 
 .description {
 	display: none;
-	font-size: 1.5rem;
-	line-height: 135%;
-	margin-top: 1.5rem;
+	font-size: $font-size-medium;
 	color: $color-medium;
+
+	p {
+		margin-top: $font-size-medium;
+		line-height: 135%;
+	}
 }
 
 .description.is-active {

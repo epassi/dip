@@ -27,18 +27,12 @@ body {
 	font-size: 1.6rem;
 
 	width: 100%;
-	margin: 4.0rem auto;
+	margin: 2.0rem auto 4.0rem auto;
 }
 
 th {
 	font-weight: bold;
 	text-align: left;
-}
-
-section {
-	margin: 4.0rem $margin-side 0 $margin-side;
-	padding-top: 2.0rem;
-	border-top: 1px solid $color-light;
 }
 
 b {
