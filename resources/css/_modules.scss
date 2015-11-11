@@ -2,7 +2,7 @@
 
 
 .page-title {
-	margin: 0 $margin-side;
+	// margin: 0 $margin-side;
 	font-size: $font-size-large;
 	line-height: 125%;
 }
@@ -10,7 +10,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 .setup {
-	margin: 3.2rem $margin-side 0 $margin-side;
+	// margin: 3.2rem $margin-side 0 $margin-side;
+	margin-top: 3.2rem;
 	border-top: 1px solid $color-light;
 }
 
@@ -20,21 +21,22 @@
 }
 
 @media (min-width: $vp-large-min) {
-	.setup {
-		float: left;
-		overflow: hidden;
-		width: 40%;
-	}
-	.setup:last-of-type {
-		padding-bottom: 0;
-		border-bottom: none;
-	}
+	// .setup {
+	// 	float: left;
+	// 	overflow: hidden;
+	// 	width: 40%;
+	// }
+	// .setup:last-of-type {
+	// 	padding-bottom: 0;
+	// 	border-bottom: none;
+	// }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
 .setup-title {
 	font-size: $font-size-medium + 0.1;
+	// font-size: $font-size-large;
 	font-weight: 400;
 	line-height: 135%;
 	margin-top: 0.8rem;
@@ -96,6 +98,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
+$bulletToTextDistance: -0.8rem;
 
 .description {
 	display: none;
@@ -106,6 +109,19 @@
 	p {
 		margin-top: $font-size-medium;
 		line-height: 135%;
+	}
+
+	li {
+		$bulletToTextDistance: 0.8rem;
+		list-style-type: circle;
+		margin-left: $bulletToTextDistance;
+		margin-top: $font-size-medium;
+		line-height: 135%;
+
+		span {
+			position: relative;
+			left: -1 * $bulletToTextDistance;
+		}
 	}
 }
 
