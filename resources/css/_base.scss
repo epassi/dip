@@ -29,6 +29,11 @@ body {
 	width: 85%;
 	margin: 2.0rem auto 4.0rem auto;
 }
+@media (min-width: $vp-medium-min) {
+	body {
+		margin-top: 4.0rem;	
+	}
+}
 
 th {
 	font-weight: bold;
