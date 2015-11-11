@@ -13,7 +13,7 @@
 	<h1 class="page-title">Density independent setup for this <span class="platform"></span></h1>
 
 	<section class="setup" id="setup-ideal">
-		<h1 class="setup-title">For easier development</h1>
+		<h1 class="setup-title">Best comp size for development</h1>
 		<div class="spec-table">
 			<div class="spec">
 				<p class="measure"><span class="dip-width"></span>dp</p>
@@ -32,13 +32,21 @@
 			</div>
 		</div>
 		<div class="description">
+			<!-- 
 			<p><span class="dip-width"></span> &times; <span class="dip-height"></span> makes it easier for developers to use your Photoshop, Sketch, or Illustrator source file as a measurement spec because it matches the density independent pixel grid: a universal pixel grid shared by all devices to approximate consistent sizing regardless of pixel density.</p>
 			<p>Bitmap assets, including photos and other non-vector elements, should be exported for development at <span class="bitmap-export-scale"></span> times the size they appear in your comp. For example, a 100 &times; 100 image in your comp would need to be cut as a <span class="asset-res"></span> &times; <span class="asset-res"></span> asset. If you use Sketch, this is easily managed by setting any object’s export size to <b><span class="bitmap-export-scale"></span>x</b>. If you use Photoshop for your screen comp, it might be helpful to link your high resolution bitmap assets as smart objects.</p>
+ -->
+			<ul>
+				<li>Ideal size for development handoff: design dimensions match density-independent code dimensions.</li>
+				<li>Bitmap assets must be exported at <span class="bitmap-export-scale"></span> times their dp scale: a 100 &times; 100dp bitmap in your comp becomes a <span class="asset-res"></span> &times; <span class="asset-res"></span>px asset.</li>
+				<li>Photoshop tip: link your <span class="bitmap-export-scale"></span>&times; bitmap assets as smart objects.</li>
+				<li>Sketch tip: for bitmap objects, select Make Exportable and add <b><span class="bitmap-export-scale"></span>&times;</b> format.</li>
+			</ul>
 		</div>
 	</section>
 
 	<section class="setup" id="setup-practical">
-		<h1 class="setup-title">For Photoshop Retina and prototyping</h1>
+		<h1 class="setup-title">Best comp size for Photoshop Retina and prototyping</h1>
 		<div class="spec-table">
 			<div class="spec">
 				<p class="measure"><span class="real-width"></span>px</p>
@@ -55,8 +63,14 @@
 			</div>
 		</div>
 		<div class="description">
-			<p>If you use Photoshop with a Retina display and <span class="dip-width"></span> &times; <span class="dip-height"></span> is too small a design space, you can enlarge the canvas to <span class="real-width"></span> &times; <span class="real-height"></span> instead. This is also a practical comp size if you plan to make a lot of prototypes out of flattened screens.</p>
-			<p>Keep in mind that this size reflects physical device pixels, and not the density independent pixels used in code by developers. As a best practice, append <b>@<span class="bitmap-export-scale"></span>x</b> to the PSD filename so that both designers and developers know they should divide by <span class="bitmap-export-scale"></span> to get correct measurements.</p>			
+
+		<ul>
+			<li>Ideal size when using Photoshop with HiDPI/Retina displays: comps will be at a comfortable working size.</li>
+			<li>Ideal size when making prototypes with flattened bitmap screens: perfect for After Effects or InVision.</li>
+			<li>Tip: append <b>@<span class="bitmap-export-scale"></span>x</b> to the filename so that developers know to divide by <span class="bitmap-export-scale"></span> for density independent measurements.</li>
+		</ul>
+
+
 		</div>
 	</section>
 

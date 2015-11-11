@@ -56,6 +56,12 @@
 	}
 }
 
+@media (min-width: $vp-large-min) {
+	.spec-table {
+		width: 50%;
+	}
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 
 .spec {
@@ -112,16 +118,17 @@ $bulletToTextDistance: -0.8rem;
 	}
 
 	li {
-		$bulletToTextDistance: 0.8rem;
+		// $bulletToTextDistance: 0.8rem;
 		list-style-type: circle;
-		margin-left: $bulletToTextDistance;
+		// margin-left: $bulletToTextDistance;
+		margin-left: 1.8rem;
 		margin-top: $font-size-medium;
 		line-height: 135%;
 
-		span {
-			position: relative;
-			left: -1 * $bulletToTextDistance;
-		}
+		// span {
+		// 	position: relative;
+		// 	left: -1 * $bulletToTextDistance;
+		// }
 	}
 }
 
