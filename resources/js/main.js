@@ -1,4 +1,4 @@
-var DIP = function() {
+var Main = function() {
 	var ASSET_SIZE_DIP = 100;
 
 	function init() {
@@ -11,8 +11,6 @@ var DIP = function() {
 		$(".platform").html(getPlatform());
 		$(".asset-res").html(getSampleAssetSize());
 
-
-
 		$("#setup-ideal .more").click(onMoreIdeal);
 		$("#setup-practical .more").click(onMorePractical);
 	}
@@ -20,11 +18,13 @@ var DIP = function() {
 	function onMoreIdeal(event) {
 		$("#setup-ideal .more").toggleClass("is-active");
 		$("#setup-ideal .description").toggleClass("is-active");
+		$("#di-unit").addClass("is-active");
 	}
 
 	function onMorePractical(event) {
 		$("#setup-practical .more").toggleClass("is-active");
 		$("#setup-practical .description").toggleClass("is-active");
+		$("#di-unit").addClass("is-active");
 	}
 
 	function getDIPWidth() {
@@ -76,4 +76,4 @@ var DIP = function() {
 	};
 }();
 
-DIP.init();
+Main.init();
