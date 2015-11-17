@@ -29,12 +29,12 @@ body {
 	width: 85%;
 	margin: 2.0rem auto 4.0rem auto;
 }
-@media (min-width: $vp-medium-min) {
-	body {
-		width: 75%;
-		margin-top: 4.0rem;	
-	}
-}
+// @media (min-width: $vp-medium-min) {
+// 	body {
+// 		width: 75%;
+// 		margin-top: 4.0rem;	
+// 	}
+// }
 
 th {
 	font-weight: bold;
@@ -43,4 +43,8 @@ th {
 
 b {
 	font-weight: 700;
+}
+
+a {
+	color: $color-link;
 }

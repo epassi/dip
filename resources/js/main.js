@@ -2,14 +2,14 @@ var Main = function() {
 	var ASSET_SIZE_DIP = 100;
 
 	function init() {
-		$(".dip-width").html(getDIPWidth());
-		$(".dip-height").html(getDIPHeight());
-		$(".real-width").html(getRealWidth());
-		$(".real-height").html(getRealHeight());
-		$(".bitmap-export-scale").html(getBitmapExportScale);
+		$(".dip-width").text(getDIPWidth());
+		$(".dip-height").text(getDIPHeight());
+		$(".real-width").text(getRealWidth());
+		$(".real-height").text(getRealHeight());
+		$(".bitmap-export-scale").text(getBitmapExportScale);
 
-		$(".platform").html(getPlatform());
-		$(".asset-res").html(getSampleAssetSize());
+		$(".platform").text(getPlatform());
+		$(".asset-res").text(getSampleAssetSize());
 
 		$("#setup-ideal .more").click(onMoreIdeal);
 		$("#setup-practical .more").click(onMorePractical);

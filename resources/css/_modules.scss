@@ -13,6 +13,8 @@
 	// margin: 3.2rem $margin-side 0 $margin-side;
 	margin-top: $font-size-xlarge;
 	border-top: 1px solid $color-light;
+
+	overflow: hidden;
 }
 
 .setup:last-of-type {
@@ -44,6 +46,13 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
+.setup-summary {
+	font-size: $font-size-medium;
+	line-height: 135%;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
 .spec-table {
 	display: table;
 	width: 100%;
@@ -52,7 +61,7 @@
 	div {
 		display: table-cell;
 		width: 25%;
-		vertical-align: bottom;
+		// vertical-align: bottom;
 	}
 }
 
@@ -68,15 +77,15 @@
 	.measure {
 		font-size: $font-size-large;
 		font-weight: 500;
+		margin-top: 0.4rem;
 	}
+
 	.label {
 		font-size: $font-size-small;
-		margin-top: 0.4rem;
 		font-weight: 400;
-		white-space: nowrap;
+		// white-space: nowrap;
 	}
 }
-
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -109,11 +118,20 @@ $bulletToTextDistance: -0.8rem;
 .description {
 	display: none;
 	font-size: $font-size-medium;
-	color: $color-medium;
 	margin-top: $font-size-large;
 
-	p {
+	.label {
+		font-size: $font-size-small;
 		margin-top: $font-size-medium;
+		font-weight: 400;
+		// color: #000;
+
+		// white-space: nowrap;
+	}
+
+	p {
+		// color: $color-medium;
+		margin-top: 0.4rem;
 		line-height: 135%;
 	}
 
@@ -136,8 +154,18 @@ $bulletToTextDistance: -0.8rem;
 	display: block;
 }
 
-@media (min-width: $vp-medium-min) {
+@media (min-width: $vp-large-min) {
+	.spec-table {
+		width: 40%;
+		float: left;
+
+	}
 	.description {
+		width: 20%;
+		float: left;
+		.label {
+			margin-top: 0;
+		}
 		p {
 			max-width: 80%;
 		}
