@@ -65,11 +65,19 @@
 	}
 }
 
-@media (min-width: $vp-large-min) {
+@media (min-width: $vp-medium-min) {
 	.spec-table {
 		width: 50%;
 	}
 }
+
+@media (min-width: $vp-large-min) {
+	.spec-table {
+		width: 25%;
+		float: left;
+	}
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -97,7 +105,8 @@
 	cursor: pointer;
 	font-size: $font-size-small;
 	font-weight: 400;
-	text-align: center;
+	// text-align: center;
+	margin-top: $font-size-medium;
 }
 
 .more.is-active {
@@ -131,7 +140,7 @@ $bulletToTextDistance: -0.8rem;
 
 	p {
 		// color: $color-medium;
-		margin-top: 0.4rem;
+		margin-top: 0.2rem;
 		line-height: 135%;
 	}
 
@@ -154,20 +163,13 @@ $bulletToTextDistance: -0.8rem;
 	display: block;
 }
 
-@media (min-width: $vp-large-min) {
-	.spec-table {
-		width: 40%;
+@media (min-width: $vp-medium-min) {
+	.description {
+		width: 33%;
 		float: left;
 
-	}
-	.description {
-		width: 20%;
-		float: left;
-		.label {
-			margin-top: 0;
-		}
 		p {
-			max-width: 80%;
+			max-width: 90%;	
 		}
 	}
 }
@@ -175,8 +177,34 @@ $bulletToTextDistance: -0.8rem;
 @media (min-width: $vp-large-min) {
 	.description {
 		display: block;
+		width: 25%;
+		margin-top: 0;
 	}
 }
+
+// @media (min-width: $vp-large-min) {
+// 	.spec-table {
+// 		width: 40%;
+// 		float: left;
+
+// 	}
+// 	.description {
+// 		width: 20%;
+// 		float: left;
+// 		.label {
+// 			margin-top: 0;
+// 		}
+// 		p {
+// 			max-width: 80%;
+// 		}
+// 	}
+// }
+
+// @media (min-width: $vp-large-min) {
+// 	.description {
+// 		display: block;
+// 	}
+// }
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -196,8 +224,8 @@ $bulletToTextDistance: -0.8rem;
 	display: block;
 }
 
-@media (min-width: $vp-large-min) {
-	#di-unit {
-		display: block;
-	}
-}
+// @media (min-width: $vp-large-min) {
+// 	#di-unit {
+// 		display: block;
+// 	}
+// }
