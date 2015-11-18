@@ -7,14 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="resources/css/main.min.css">
+	<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+
 </head>
 
 <body>
-	<h1 class="page-title">Comp Sizes for this <span class="platform"></span></h1>
+	<h1 class="page-title">Comp Sizes for <span class="platform"></span> Apps</h1>
 
 	<section class="setup" id="setup-ideal">
 		<h1 class="setup-title">Density Independent Size</h1>
-		<p class="setup-summary">Best for development and multi-device design.</p>
+		<p class="setup-summary">Best for development, Sketch users, multi-device design.</p>
 		<div class="spec-table">
 			<div class="spec">
 				<p class="label">Width</p>
@@ -46,7 +48,7 @@
 
 	<section class="setup" id="setup-practical">
 		<h1 class="setup-title">True Size</h1>
-		<p class="setup-summary">Best for designing/prototyping to this <span class="platform"></span>.</p>
+		<p class="setup-summary">Best for Photoshop users, device-specific design.</p>
 		<div class="spec-table">
 			<div class="spec">
 				<p class="label">Width</p>
@@ -62,11 +64,11 @@
 		<p class="more">More</p>
 		<div class="description">
 			<p class="label">Pros</p>
-			<p>Comfortable working size for Photoshop with HiDPI/Retina displays. Optimal for prototyping specifically to this <span class="platform"></span>.</p>
+			<p>Comfortable working size for Photoshop with HiDPI/Retina displays. Pixel-perfect screens for prototyping specifically to this <span class="platform"></span>.</p>
 		</div>
 		<div class="description">
 			<p class="label">Cons</p>
-			<p>Developer will need to divide all specs by <span class="bitmap-export-scale"></span> to get density independent units* for code. Comp might be harder to reuse as a starting point for other device layouts.</p>
+			<p>Developer will need to divide all specs by <span class="bitmap-export-scale"></span> to get density independent units* for code. Comp might be harder to reuse as a starting point for other device layouts. Complicates export settings in Sketch.</p>
 		</div>
 		<div class="description">
 			<p class="label">Tips</p>
@@ -74,7 +76,7 @@
 		</div>
 	</section>
 	<footer>
-		<p class="footnote" id="di-unit">* 1 density independent unit = 1pt in iOS, 1dp in Android, 1px in web. <a href="https://design.google.com/devices/">See all device metrics ›</a></p>
+		<p class="footnote" id="di-unit">* 1 iOS point (pt) = 1 Android density independent pixel (dp) = 1 web pixel (px). <a href="https://design.google.com/devices/">See all device metrics ›</a></p>
 	</footer>
 
 	<script src="resources/js/all.min.js"></script>
