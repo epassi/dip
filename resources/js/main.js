@@ -60,7 +60,22 @@ var Main = function() {
 		// else if (platform.indexOf("BlackBerry") >= 0)	return "BlackBerry";
 		// else 											return "device";
 
-		return WURFL.complete_device_name;
+		var platform = "";
+		var userAgent = navigator.platform;
+		if (WURFL.form_factor === "Desktop") {
+			if (userAgent.indexOf("Win") >= 0) 				platform = "this PC";
+			else if (userAgent.indexOf("Mac") >= 0)			platform = "this Mac";
+			// else if (userAgent.indexOf("Android") >= 0)		platform = "Android device";
+			// else if (userAgent.indexOf("iPod") >= 0)		platform = "iPod";
+			// else if (userAgent.indexOf("iPhone") >= 0)		platform = "iPhone";
+			// else if (userAgent.indexOf("iPad") >= 0)		platform = "iPad";
+			// else if (userAgent.indexOf("BlackBerry") >= 0)	platform = "BlackBerry";
+			else 											platform = "device";
+		} else {
+			platform = WURFL.complete_device_name;
+		}
+
+		return platform;
 	}
 
 	function getSampleAssetSize() {
