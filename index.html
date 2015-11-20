@@ -3,71 +3,80 @@
 <html>
 
 <head>
-	<title>Designing for Density</title>
+	<title>Comp Sizes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="resources/css/main.min.css">
+	<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+
 </head>
 
 <body>
-	<h1 class="page-title">Designing for density on this <span class="platform"></span></h1>
+	<h1 class="page-title">Comp Sizes for <span class="platform"></span></h1>
 
 	<section class="setup" id="setup-ideal">
-		<h1 class="setup-title">Best comp size for development</h1>
+		<h1 class="setup-title">Density Independent Size</h1>
+		<p class="setup-summary">Best for development, Sketch users, multi-device design.</p>
 		<div class="spec-table">
 			<div class="spec">
-				<p class="measure"><span class="dip-width"></span></p>
 				<p class="label">Width</p>
+				<p class="measure"><span class="dip-width"></span></p>
 			</div>
 			<div class="spec">
-				<p class="measure"><span class="dip-height"></span></p>
 				<p class="label">Height</p>
+				<p class="measure"><span class="dip-height"></span></p>
 			</div>
 			<div class="spec">
+				<p class="label">Export</p>
 				<p class="measure"><span class="bitmap-export-scale"></span>&times;</p>
-				<p class="label">Bitmap Export</p>
-			</div>
-			<div>
-				<p class="more">More</p>
 			</div>
 		</div>
+		<p class="more">More</p>
 		<div class="description">
-			<ul>
-				<li>Ideal size for development handoff: pixels in comp match density independent units* in code.</li>
-				<li>Bitmap assets must be exported at <span class="bitmap-export-scale"></span> times their density independent scale: a 100 &times; 100 bitmap in your comp becomes a <span class="asset-res"></span> &times; <span class="asset-res"></span> asset.</li>
-				<li>Photoshop tip: link your <span class="bitmap-export-scale"></span>&times; bitmap assets as smart objects.</li>
-				<li>Sketch tip: for bitmap objects, select Make Exportable and add <b><span class="bitmap-export-scale"></span>&times;</b> format.</li>
-			</ul>
+			<p class="label">Pros</p>
+			<p>Pixels in comp match density independent units* in code. Comp can be reused as a starting point for other layouts in a multi-device project.</p>
+		</div>
+		<div class="description">
+			<p class="label">Cons</p>
+			<p>For Photoshop HiDPI/Retina users, canvas might be unusably small. Exported screens might not be pixel-perfect in prototypes.</p>
+		</div>
+		<div class="description">
+			<p class="label">Tips</p>
+			<p>Create assets at highest resolution possible to support all high density displays. Link assets as smart objects if using Photoshop.</p>
 		</div>
 	</section>
 
 	<section class="setup" id="setup-practical">
-		<h1 class="setup-title">Best comp size for Photoshop Retina and prototyping</h1>
+		<h1 class="setup-title">True Size</h1>
+		<p class="setup-summary">Best for Photoshop users, device-specific design.</p>
 		<div class="spec-table">
 			<div class="spec">
-				<p class="measure"><span class="real-width"></span></p>
 				<p class="label">Width</p>
+				<p class="measure"><span class="real-width"></span></p>
 			</div>
 			<div class="spec">
-				<p class="measure"><span class="real-height"></span></p>
 				<p class="label">Height</p>
+				<p class="measure"><span class="real-height"></span></p>
 			</div>
 			<div class="spec">
-			</div>
-			<div>
-				<p class="more">More</p>
 			</div>
 		</div>
+		<p class="more">More</p>
 		<div class="description">
-			<ul>
-				<li>Ideal size when using Photoshop with HiDPI/Retina displays: comps will have a comfortable working size.</li>
-				<li>Ideal size when making prototypes with flattened bitmap screens: perfect for After Effects or InVision.</li>
-				<li>Tip: append <b>@<span class="bitmap-export-scale"></span>x</b> to the comp filename so that developers know to divide by <span class="bitmap-export-scale"></span> for density independent units.*</li>
-			</ul>
+			<p class="label">Pros</p>
+			<p>Comfortable working size for Photoshop with HiDPI/Retina displays. Pixel-perfect screens for prototyping specifically to this <span class="platform"></span>.</p>
+		</div>
+		<div class="description">
+			<p class="label">Cons</p>
+			<p>Developer will need to divide all specs by <span class="bitmap-export-scale"></span> to get density independent units* for code. Comp might be harder to reuse as a starting point for other device layouts. Complicates export settings in Sketch.</p>
+		</div>
+		<div class="description">
+			<p class="label">Tips</p>
+			<p>Append <b>@<span class="bitmap-export-scale"></span>x</b> to the comp filename so that developers know to divide by <span class="bitmap-export-scale"></span> for density independent units.</p>
 		</div>
 	</section>
 	<footer>
-		<p class="footnote" id="di-unit">* 1 density independent unit = 1pt in iOS, 1dp in Android, 1px in web.</p>
+		<p class="footnote" id="di-unit">* 1 iOS point (pt) = 1 Android density independent pixel (dp) = 1 web pixel (px). <a href="https://design.google.com/devices/">See all device metrics ›</a></p>
 	</footer>
 
 	<script src="resources/js/all.min.js"></script>
