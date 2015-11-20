@@ -1,4 +1,4 @@
-DIP Info
+Comp sizes for density independent design
 ====
 
-App and web designers often get confused about the concept of designing for density independence, so I made this diagnostic/helper page that will tell you exactly how to set up your design tool to target any device. Just load the page in your target device's browser.
+App and web designers sometimes get confused about the concept of density independence and knowing how to properly size their screen comps. This project generates a web page that gives production guidance for the specific device showing the page. The page just needs to be viewed in the device's browser.
