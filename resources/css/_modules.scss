@@ -225,8 +225,8 @@ $bulletToTextDistance: -0.8rem;
 	display: block;
 }
 
-// @media (min-width: $vp-large-min) {
-// 	#di-unit {
-// 		display: block;
-// 	}
-// }
+@media (min-width: $vp-large-min) {
+	#di-unit {
+		display: block;
+	}
+}
